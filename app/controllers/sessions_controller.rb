@@ -5,18 +5,18 @@ class SessionsController < ApplicationController
   def create
     errors = []
 
-    login_id = session_params['login_id']
+    login_id = session_params["login_id"]
     if login_id.blank?
-      errors.push('ユーザーIDを入力してください。')
+      errors.push("ユーザーIDを入力してください。")
     end
 
-    password = session_params['password']
+    password = session_params["password"]
     if password.blank?
-      errors.push('パスワードを入力してください。')
+      errors.push("パスワードを入力してください。")
     end
 
     unless errors.blank?
-      login_error(errors.join(' '))
+      login_error(errors.join(" "))
       return
     end
 
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
       login(user)
       redirect_to pictures_path
     else
-      login_error('ユーザーIDまたはパスワードが間違っています。確認してください。')
+      login_error("ユーザーIDまたはパスワードが間違っています。確認してください。")
     end
   end
 
