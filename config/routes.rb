@@ -10,5 +10,16 @@ Rails.application.routes.draw do
   #
   root "sessions#new"
 
+  resources :pictures, only: [ :index, :new, :create ] do
+    member do
+      post :tweet
+    end
+  end
+
   resources :sessions, only: [ :new, :create, :destroy ]
+  resources :oauth, only: [ :new ] do
+    collection do
+      get :callback
+    end
+  end
 end

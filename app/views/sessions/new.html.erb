@@ -1,17 +1,19 @@
 <h1>ログイン</h1>
 
+<%= render partial: 'shared/errors' %>
+
 <%= form_for :session, url: sessions_path do |form| %>
-  <div>
-    <%= form.label :login_id, "ユーザーID" %>
-    <%= form.search_field :login_id %>
-  </div>
+<div>
+  <%= form.label :login_id, "ユーザーID" %>
+  <%= form.search_field :login_id %>
+</div>
 
-  <div>
-    <%= form.label :password, "パスワード" %>
-    <%= form.password_field :password %>
-  </div>
+<div>
+  <%= form.label :password, "パスワード" %>
+  <%= form.password_field :password %>
+</div>
 
-  <div>
-    <%= form.submit "ログインする" %>
-  </div>
+<div>
+  <%= form.submit "ログインする" %>
+</div>
 <% end %>

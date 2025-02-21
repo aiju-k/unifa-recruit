@@ -1,0 +1,24 @@
+<%= render partial: 'shared/logout' %>
+
+<h1>写真一覧</h1>
+
+<div><%= link_to "写真アップロード画面へ", new_picture_path %></div>
+
+<div>
+  <%= link_to "MyTweetAppと連携する", new_oauth_path  %></div>
+
+<div class="pictures">
+  <% @pictures.each do |picture| %>
+  <div>
+    <p><%= picture.title %></p>
+
+    <div class="image_box">
+      <%= image_tag picture.image, class: 'thumbnail' %>
+    </div>
+
+    <div>
+      <%= button_to 'tweet', tweet_picture_path(picture) %>
+    </div>
+  </div>
+  <% end %>
+</div>

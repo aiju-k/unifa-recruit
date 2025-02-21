@@ -11,6 +11,10 @@ services:
     working_dir: /app
     environment:
       MYSQL_PASSWORD: password
+      CLIENT_ID: ${CLIENT_ID}
+      CLIENT_SECRET: ${CLIENT_SECRET}
+      OAUTH_BASE_URL: ${OAUTH_BASE_URL}
+      TWEET_BASE_URL: ${TWEET_BASE_URL}
     depends_on:
       - db
     

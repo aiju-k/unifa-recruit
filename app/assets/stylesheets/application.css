@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.error {
+  color: red;
+}
+
+.pictures {
+  display: flex;
+  text-align: center;
+}
+
+.image_box {
+  width: 200px;
+  height: 200px;
+  background-color: #F7F7F7;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+ 
+.thumbnail {
+  max-width: 200px;
+  max-height: 200px;
+}
