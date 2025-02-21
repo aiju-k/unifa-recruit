@@ -9,7 +9,9 @@
 #   end
 
 # user
-User.create!(
-  login_id: 'test',
-  password: 'password'
-)
+unless User.first
+  User.create!(
+    login_id: 'test',
+    password: 'password'
+  )
+end

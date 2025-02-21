@@ -1,24 +1,20 @@
-# README
+# 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby on Rails 7.2
+* データベース：sqlite 3
+* ローカル環境：docker-compose
 
-Things you may want to cover:
+## 境構築手順
 
-* Ruby version
+* `docker compose build --no-cache`
+* `docker compose run --rm web bin/setup`
+* `docker compose down`
+* `docker compose up -d`
+* `http://localhost:3000` へアクセス
+* ログインユーザー
+  * ユーザーID：`test`
+  * パスワード：`password`
 
-* System dependencies
+## その他
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 所要時間：約10時間
