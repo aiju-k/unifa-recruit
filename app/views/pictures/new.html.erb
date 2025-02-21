@@ -1,0 +1,27 @@
+<%= render partial: 'shared/logout' %>
+
+<h1>写真アップロード</h1>
+
+<%= render partial: 'shared/errors' %>
+
+<%= form_for :picture, model: @picture, url: '/pictures/', method: :post do |form| %>
+<div>
+  <%= form.label :title, "タイトル" %>
+  <%= form.search_field :title %>
+</div>
+
+<div>
+  <%= form.label :image, "画像ファイル" %>
+  <%= form.file_field :image, accept: 'image/*' %>
+</div>
+
+<div>
+  <%= form.submit "アップロードする" %>
+</div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "キャンセルする", pictures_path %>
+</div>
