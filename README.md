@@ -6,6 +6,15 @@
 
 ## 環境構築手順
 
+* git clone git@github.com:aiju-k/unifa-recruit.git
+* .env ファイルをルートディレクトリに配置
+  ```sh
+  CLIENT_ID = <OAuthの client_id>
+  CLIENT_SECRET = <OAuthの client_secret>
+
+  TWEET_BASE_URL = <ツイートAPIのURL 例: "~.com/api/tweets">
+  OAUTH_BASE_URL = <認証APIのURL 例: "~.com/oauth/"> # /oauth 以降のパスは含めない
+  ```
 * `docker compose build --no-cache`
 * `docker compose run --rm web bin/setup`
 * `docker compose down`
