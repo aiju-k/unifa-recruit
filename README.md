@@ -4,7 +4,7 @@
 * データベース：sqlite 3
 * ローカル環境：docker-compose
 
-## 境構築手順
+## 環境構築手順
 
 * `docker compose build --no-cache`
 * `docker compose run --rm web bin/setup`
